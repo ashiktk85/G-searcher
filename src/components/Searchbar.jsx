@@ -2,14 +2,14 @@
 
 import { useState } from 'react'
 
-export default function LocationSearchBar() {
+export default function LocationSearchBar({ onSearch }) {
   const [searchValue, setSearchValue] = useState('')
   const [isFocused, setIsFocused] = useState(false)
 
   const handleSearch = (e) => {
     e.preventDefault()
     console.log('[v0] Searching for location:', searchValue)
- 
+    onSearch(searchValue)
   }
 
   const handleClear = () => {
@@ -79,7 +79,7 @@ export default function LocationSearchBar() {
 
           <button
             type="submit"
-            className="mr-2 px-6 py-2.5 bg-black text-white rounded-full hover:bg-blue-700 transition-colors duration-200 font-medium"
+            className="mr-2 px-6 py-2.5 bg-black text-white rounded-full hover:bg-black/80 transition-colors duration-200 font-medium cursor-pointer"
           >
             Search
           </button>

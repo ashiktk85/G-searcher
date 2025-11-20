@@ -8,6 +8,8 @@ import ProtectedRoute from './components/ProtectedRoute';
 import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
 import { useState } from 'react';
+import { TwentyFirstToolbar } from '@21st-extension/toolbar-react';
+import { ReactPlugin } from '@21st-extension/react';
 
 function AppLayout({ children }) {
   const { user } = useAuth();
@@ -74,6 +76,7 @@ function App() {
       <Router>
         <AppContent />
       </Router>
+      <TwentyFirstToolbar config={{ plugins: [ReactPlugin] }} />
     </AuthProvider>
   );
 }

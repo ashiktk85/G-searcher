@@ -39,6 +39,11 @@ export const authService = {
   async getProfile() {
     const response = await api.get('/auth/profile');
     return response.data;
+  },
+
+  async getSearch(query) {
+    const response = await api.post(`/search`, { query: query });
+    return response.data;
   }
 };
 

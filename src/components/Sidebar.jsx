@@ -43,11 +43,11 @@ const Sidebar = ({ onCollapseChange }) => {
 
   return (
     <div
-      className={`bg-gray-900 text-white transition-all duration-300 ease-in-out ${
+      className={`bg-[#133a5b] text-white transition-all duration-300 ease-in-out ${
         isCollapsed ? 'w-20' : 'w-64'
       } min-h-screen fixed left-0 top-0 z-40`}
     >
-      {/* Sidebar Header */}
+ 
       <div className="flex items-center justify-between p-4 border-b border-gray-700">
         {!isCollapsed && (
           <h2 className="text-xl font-bold text-white">Avoria</h2>
